@@ -19,6 +19,10 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+.navbar {
+  padding-left: 40px;
+  padding-right: 20px; /* prima era 32px o più alto */
+}
 
 .logo {
   height: 40px;
@@ -26,10 +30,11 @@ body {
 
 .navbar-right {
   display: flex;
-  gap: 16px; /* distanza tra i link */
-  margin-right: 40px; /* oppure meno */
+  justify-content: center;
+  align-items: center;
+  gap: 32px; /* aumenta la spaziatura tra i link */
+  margin-right: 60px; /* allontana dal bordo destro */
 }
-
 .navbar-right a {
   text-decoration: none;
   color: black;
