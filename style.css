@@ -14,14 +14,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 32px;
+  padding-left: 40px;
+  padding-right: 20px;
   z-index: 10;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-}
-.navbar {
-  padding-left: 40px;
-  padding-right: 20px; /* prima era 32px o più alto */
 }
 
 .logo {
@@ -65,7 +62,12 @@ body {
 .hero {
   position: relative;
   height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
 }
+
 
 .hero-left h1 {
   font-size: 64px;
