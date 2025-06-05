@@ -24,8 +24,13 @@ body {
   height: 40px;
 }
 
+.navbar-right {
+  display: flex;
+  gap: 16px; /* distanza tra i link */
+  margin-right: 40px; /* oppure meno */
+}
+
 .navbar-right a {
-  margin-left: 24px;
   text-decoration: none;
   color: black;
   font-weight: 600;
