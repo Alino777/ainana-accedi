@@ -83,6 +83,13 @@ body {
   margin-top: 10px;
 }
 
+.ainana-title {
+  max-width: 100%;
+  width: 460px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
 .login-box {
   background: white;
   padding: 32px;
