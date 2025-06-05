@@ -63,11 +63,8 @@ body {
 }
 
 .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
   height: 100vh;
-  padding: 100px 60px 60px;
 }
 
 .hero-left h1 {
@@ -85,10 +82,13 @@ body {
 }
 
 .ainana-title {
+  width: 400px;
   max-width: 100%;
-  width: 460px;
   height: auto;
-  margin-bottom: 40px;
+  position: absolute;
+  top: 160px;
+  left: 80px;
+  z-index: 2;
 }
 
 .login-box {
