@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ainana – Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-left">
+      <img src="logo.png" alt="Logo Ainana" class="logo">
+    </div>
+    <nav class="navbar-right">
+      <a href="#">Ainana</a>
+      <a href="#">I nostri valori</a>
+      <a href="#" class="button-yellow">Accedi</a>
+    </nav>
+  </header>
+
+  <main>
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="video.mp4" type="video/mp4" />
+      Il tuo browser non supporta i video HTML5.
+    </video>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h1>AINANA</h1>
+        <p>Nutriamo il mondo con la conoscenza</p>
+      </div>
+      <div class="login-box">
+        <img src="robot.png" alt="robot" class="robot-icon">
+        <h2>Fai già parte del nostro team?</h2>
+        <form>
+          <input type="text" placeholder="Nome" required>
+          <input type="text" placeholder="Cognome" required>
+          <input type="email" placeholder="E-mail" required>
+          <input type="password" placeholder="Password" required>
+          <div class="form-options">
+            <label><input type="checkbox"> Ricordami</label>
+            <a href="#">Hai dimenticato la password?</a>
+          </div>
+          <button type="submit" class="button-yellow">Accedi</button>
+        </form>
+        <p class="register-text">Non hai un account? <a href="#">Registrati</a></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
