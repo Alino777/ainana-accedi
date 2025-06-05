@@ -84,11 +84,11 @@ body {
 }
 
 .ainana-title {
-  width: 400px;
-  max-width: 100%;
+  width: 600px; /* aumentato da 400 */
+  max-width: 90vw; /* si adatta su mobile */
   height: auto;
   position: absolute;
-  top: 160px;
+  top: 120px;  /* regola la posizione verticale se serve */
   left: 80px;
   z-index: 2;
 }
