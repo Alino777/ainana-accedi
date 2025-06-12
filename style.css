@@ -47,6 +47,8 @@ body {
   color: black;
   border: none;
   cursor: pointer;
+  width: 100%; /* <-- AGGIUNGI QUESTA RIGA */
+  font-size: 16px; /* Consiglio: aumenta un po' la dimensione del font */
 }
 
 .bg-video {
@@ -123,6 +125,7 @@ body {
   margin-bottom: 12px;
   border: 1px solid #ccc;
   border-radius: 10px;
+  box-sizing: border-box; /* <-- AGGIUNGI QUESTA RIGA */
 }
 
 .form-options {
