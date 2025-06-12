@@ -106,6 +106,16 @@ body {
   /* Questo contenitore ora allineerà il titolo grazie al flex del .hero */
 }
 
+.button-yellow {
+  background-color: #FFD700;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
 
 .hero-left h1 {
   font-size: 64px;
