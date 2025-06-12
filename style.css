@@ -6,50 +6,59 @@ body {
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
+  /* Proprietà esistenti */
   height: 70px;
   background-color: #fff2c5;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 40px;
-  padding-right: 20px;
+  width: 100%;
+  padding: 0 40px; /* Padding solo a destra e sinistra */
   z-index: 10;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-}
+  box-sizing: border-box; /* Importante per un padding corretto */
 
-.logo {
-  height: 40px;
-}
-
-.navbar-right {
+  /* --- NUOVE PROPRIETÀ FLEXBOX --- */
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* La magia avviene qui! */
   align-items: center;
-  gap: 32px; /* aumenta la spaziatura tra i link */
-  margin-right: 60px; /* allontana dal bordo destro */
 }
-.navbar-right a {
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px; /* Spazio tra i link */
+}
+/* Stile per il gruppo delle azioni a destra */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* Spazio tra selettore lingua e bottone */
+}
+
+/* Stile per i link di navigazione (già presente nel tuo codice ma lo riporto per chiarezza) */
+.navbar-links a, .navbar-actions a {
   text-decoration: none;
   color: black;
   font-weight: 600;
 }
 
-.button-yellow {
-  background-color: #FFD700;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-  color: black;
-  border: none;
+/* Stile per il selettore della lingua (puoi personalizzarlo) */
+.language-selector {
+  font-weight: 600;
   cursor: pointer;
-  width: 100%; /* <-- AGGIUNGI QUESTA RIGA */
-  font-size: 16px; /* Consiglio: aumenta un po' la dimensione del font */
+  /* Aggiungi qui stili per la freccetta se necessario */
 }
+
+/* Assicurati che l'altezza del logo sia definita (dovresti averla già) */
+.logo {
+  height: 40px;
+  display: block; /* Evita spazi extra sotto l'immagine */
+}
+
+/* Aggiungi questa nuova regola */
+.login-box .button-yellow {
+  width: 100%; /* Applica la larghezza piena solo al bottone dentro il login-box */
+}
+
 
 .bg-video {
   position: absolute;
@@ -135,6 +144,7 @@ body {
   font-size: 14px;
   margin-bottom: 16px;
 }
+
 
 .register-text {
   margin-top: 16px;
