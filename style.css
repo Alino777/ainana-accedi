@@ -185,3 +185,46 @@ body {
   margin-top: 16px;
   font-size: 14px;
 }
+
+/* style.css - AGGIUNGI QUESTO ALLA FINE */
+
+/* Stile per i messaggi di errore */
+.error-message {
+  color: #D8000C; /* Rosso per l'errore */
+  background-color: #FFD2D2;
+  border: 1px solid #D8000C;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 16px;
+  display: none; /* Nascosto di default */
+}
+
+/* Stile per i bottoni in stato di caricamento */
+.button-yellow.loading {
+  position: relative;
+  color: transparent; /* Nasconde il testo originale */
+  cursor: wait;
+}
+
+.button-yellow.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  margin-left: -8px;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
