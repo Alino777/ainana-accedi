@@ -22,16 +22,21 @@ body {
   align-items: center;
 }
 
-.navbar-links {
-  display: flex;
-  align-items: center;
-  gap: 32px; /* Spazio tra i link */
-}
-/* Stile per il gruppo delle azioni a destra */
+.navbar-links,
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 24px; /* Spazio tra selettore lingua e bottone */
+  gap: 32px;
+  flex: 1; /* <-- AGGIUNGI QUESTO: Dice ai due lati di occupare lo stesso spazio */
+}
+
+.navbar-links {
+  justify-content: flex-start; /* Allinea i link a sinistra del loro spazio */
+}
+
+.navbar-actions {
+  justify-content: flex-end; /* Allinea le azioni a destra del loro spazio */
+  gap: 24px;
 }
 
 /* Stile per i link di navigazione (già presente nel tuo codice ma lo riporto per chiarezza) */
@@ -41,11 +46,24 @@ body {
   font-weight: 600;
 }
 
-/* Stile per il selettore della lingua (puoi personalizzarlo) */
+/* Modifica questa regola nel tuo CSS */
 .language-selector {
-  font-weight: 600;
+  font-weight: 400; /* Testo meno grassetto (400 è normale) */
   cursor: pointer;
-  /* Aggiungi qui stili per la freccetta se necessario */
+  position: relative; /* Necessario per posizionare la freccia */
+  padding-right: 15px; /* Spazio per la freccia */
+}
+
+/* Aggiungi questa NUOVA regola per creare la freccia */
+.language-selector::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -2px; /* Centra la freccia verticalmente */
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000; /* Colore della freccia */
 }
 
 /* Assicurati che l'altezza del logo sia definita (dovresti averla già) */
@@ -70,13 +88,22 @@ body {
   z-index: -1;
 }
 
+/* Modifica la regola .hero */
 .hero {
   position: relative;
   height: 100vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 80px;
+  align-items: flex-start; /* <-- CAMBIA DA 'center' A 'flex-start' */
+  padding: 140px 80px 80px; /* Aumenta il padding-top per spingere giù dall'inizio */
+  box-sizing: border-box;
+}
+
+
+
+/* La classe .hero-left non aveva stili, ma assicuriamoci che contenga bene il titolo */
+.hero-left {
+  /* Questo contenitore ora allineerà il titolo grazie al flex del .hero */
 }
 
 
@@ -94,14 +121,12 @@ body {
   margin-top: 10px;
 }
 
+/* Modifica la regola .ainana-title per renderla più semplice e controllabile */
 .ainana-title {
-  width: 600px; /* aumentato da 400 */
-  max-width: 90vw; /* si adatta su mobile */
+  width: 600px;
+  max-width: 90vw;
   height: auto;
-  position: absolute;
-  top: 120px;  /* regola la posizione verticale se serve */
-  left: 80px;
-  z-index: 2;
+  /* RIMUOVI position, top, left, e z-index da qui */
 }
 
 .login-box {
